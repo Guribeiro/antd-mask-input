@@ -123,6 +123,9 @@ export const MaskedInput = React.forwardRef<InputRef, MaskedInputProps>(
       //   version (imask.value has a setter that triggers masking)
       input.value = masked.value;
       lastValue.current = masked.value;
+
+      masked.updateValue()
+      masked.updateControl()
     }
 
     React.useEffect(() => {
